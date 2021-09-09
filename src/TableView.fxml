@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableViewController">
+   <children>
+      <TableView fx:id="studentsTable" layoutX="28.0" layoutY="157.0" prefHeight="200.0" prefWidth="562.0">
+        <columns>
+          <TableColumn fx:id="idCol" maxWidth="70.0" prefWidth="70.0" style="-fx-alignment: center;" text="ID" />
+          <TableColumn fx:id="nameCol" maxWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="NAME" />
+            <TableColumn fx:id="birthCol" maxWidth="85.0" prefWidth="85.0" style="-fx-alignment: center;" text="BIRTH DATE" />
+            <TableColumn fx:id="addressCol" maxWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="ADDRESS" />
+            <TableColumn fx:id="emailCol" maxWidth="140.0" prefWidth="140.0" style="-fx-alignment: center;" text="EMAIL" />
+            <TableColumn fx:id="editCol" maxWidth="64.0" prefWidth="64.0" style="-fx-alignment: center;" text="NAME" />
+        </columns>
+      </TableView>
+      <Pane layoutY="56.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text layoutX="28.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Students Details">
+         <font>
+            <Font name="Roboto" size="30.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" layoutX="28.0" layoutY="91.0" prefHeight="49.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#getAddView" style="-fx-background-color: green;" text="Add" textFill="WHITE" />
+            <Button mnemonicParsing="false" onMouseClicked="#refreshTable" style="-fx-background-color: orange;" text="Refresh" textFill="#fff9f9" />
+            <Button mnemonicParsing="false" onMouseClicked="#print" style="-fx-background-color: black;" text="Print" textFill="WHITE" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <Button layoutX="550.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#close" style="-fx-background-color: red;" text="Close" textFill="WHITE" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
