@@ -18,6 +18,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.print.PrinterJob;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.Alert;
@@ -88,7 +89,19 @@ public class TableViewController implements Initializable {
 
     @FXML
     void print(MouseEvent event) {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        PrinterJob printerJob = PrinterJob.createPrinterJob();
+        if (printerJob != null) {
 
+            boolean successDialog = printerJob.showPrintDialog(stage.getOwner());
+
+            if (successDialog) {
+                boolean success = printerJob.printPage(studentsTable);
+                if (success) {
+                    printerJob.endJob();
+                }
+            }
+        }
     }
 
     @FXML
