@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 
-import helpers.DBConnect;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -27,11 +26,13 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 import javafx.stage.StageStyle;
 import javafx.util.Callback;
 import models.Student;
+import utilities.DBConnect;
 
 public class TableViewController implements Initializable {
 
@@ -157,10 +158,12 @@ public class TableViewController implements Initializable {
                         Button deleteIcon = new Button("D");
                         Button editIcon = new Button("E");
 
-                        deleteIcon.setStyle(" -fx-cursor: hand ;"
+                        deleteIcon
+                                .setStyle(" -fx-cursor: hand ; " + "-fx-background-color: #ff1744;" + "color: #ffffff;"
 
-                        );
-                        editIcon.setStyle(" -fx-cursor: hand ;"
+                                );
+                        deleteIcon.setTextFill(Color.WHITE);
+                        editIcon.setStyle(" -fx-cursor: hand ; " + "-fx-background-color: #00E676;"
 
                         );
 

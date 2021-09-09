@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-import helpers.DBConnect;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
@@ -15,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import models.Student;
+import utilities.DBConnect;
 
 public class AddStudentController implements Initializable {
 

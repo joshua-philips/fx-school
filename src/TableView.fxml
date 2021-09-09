@@ -19,7 +19,7 @@
             <TableColumn fx:id="birthCol" maxWidth="85.0" prefWidth="85.0" style="-fx-alignment: center;" text="BIRTH DATE" />
             <TableColumn fx:id="addressCol" maxWidth="100.0" prefWidth="100.0" style="-fx-alignment: center;" text="ADDRESS" />
             <TableColumn fx:id="emailCol" maxWidth="140.0" prefWidth="140.0" style="-fx-alignment: center;" text="EMAIL" />
-            <TableColumn fx:id="editCol" maxWidth="64.0" prefWidth="64.0" style="-fx-alignment: center;" text="NAME" />
+            <TableColumn fx:id="editCol" maxWidth="64.0" prefWidth="64.0" style="-fx-alignment: center;" />
         </columns>
       </TableView>
       <Pane layoutY="56.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
